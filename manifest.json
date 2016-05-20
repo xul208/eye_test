@@ -1,16 +1,19 @@
 {
-  "name": "Full Page Screen Capture",
-  "version": "0.0.15",
-  "manifest_version": 2,
-  "description": "Screen capture your current page in entirety and reliably!",
+    "name": "Manifest Permissions",
+    "description": "http://stackoverflow.com/questions/14361061/extension-manifest-must-request-permission-to-access-this-host",
+    "version": "1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "permissions": [ "tabs" ],
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  }
+    "permissions": [
+        "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/"
+    ]
 }

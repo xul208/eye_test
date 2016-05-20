@@ -5,13 +5,12 @@ function getCurrentDomain() {
   return currentUrl;
 }
 
-function nextStep () {
-  //chrome.tabs.update(null, {url:'https://xli-dev.dhcp.tripadvisor.ru'});
-  console.log(getCurrentDomain());
-
-  //setTimeout(nextStep2, 3000);
-  //console.log(0);
+function test(){
+//  chrome.tabs.update(null, {url:'https://xli-dev.dhcp.tripadvisor.com'});
+//  alert(0);
+  chrome.tabs.executeScript(null, {
+          file: "onPage.js" 
+        });
 }
-
-// document.getElementById('clickme').addEventListener('click', test); 
-setTimeout(nextStep, 3000);
+document.getElementById('clickme').addEventListener('click', test); 
+//setTimeout(nextStep, 3000);
